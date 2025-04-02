@@ -1,4 +1,4 @@
-# InfoBite - Get MU-Style Notes
+# InfoBite - Ai Summarizer
 
 <div align="center">
   <img src="https://img.shields.io/badge/Python-3.10-blue.svg" alt="Python 3.10"/>
