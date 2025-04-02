@@ -74,12 +74,6 @@
    ```
    
    > **Note**: You need to obtain a Google API key from [Google AI Studio](https://makersuite.google.com/app/apikey)
-   >
-   > **Security Best Practices**:
-   > - Never commit your `.env` file to version control
-   > - Add `.env` to your `.gitignore` file
-   > - Regularly rotate your API keys
-   > - Restrict API key usage with appropriate quotas and limitations
 
 ## Usage
 
