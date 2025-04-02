@@ -1,7 +1,7 @@
-# AI Summarizer
+# InfoBite - Get MU-Style Notes
 
 <div align="center">
-  <img src="https://img.shields.io/badge/Python-3.8+-blue.svg" alt="Python 3.8+"/>
+  <img src="https://img.shields.io/badge/Python-3.10-blue.svg" alt="Python 3.10"/>
   <img src="https://img.shields.io/badge/Flask-2.0+-green.svg" alt="Flask 2.0+"/>
   <img src="https://img.shields.io/badge/Google%20Generative%20AI-Gemini-purple.svg" alt="Google Gemini"/>
   <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"/>
@@ -9,16 +9,16 @@
 
 ## Overview
 
-**AI Summarizer** is a web application designed for Mumbai University engineering students to quickly extract key information from educational content. It uses Google's Gemini AI to generate structured, comprehensive summaries from YouTube videos and documents (PDF/PPT), formatted specifically for exam preparation.
+**InfoBite** is a web application designed for Mumbai University engineering students to quickly extract key information from educational content. It uses Google's Gemini AI to generate structured, comprehensive summaries from YouTube videos and documents (PDF/PPT), formatted specifically for exam preparation.
 
-![Application Screenshot](https://via.placeholder.com/800x400?text=AI+Summarizer+Screenshot) <!-- Replace with your actual screenshot -->
+![Application Screenshot](https://github.com/KaleKaran/InfoBite/blob/d27e3ebb23d87ad6fceab599b2a523ee9a203266/static/images/Homepage.png)
 
 ## Features
 
 - **YouTube Video Summarization**
   - Process YouTube video transcripts using powerful AI
   - Multiple summary formats:
-    - Detailed notes with sections for definitions, classifications, explanations, and applications
+    - Detailed MU-Style Notes with sections for definitions, classifications, diagrams, explanations, and applications
     - Concise 5-10 key points format
     - Custom prompt options for tailored summaries
 
@@ -36,9 +36,9 @@
   - Automatic identification of diagram needs in educational content
   - Retrieval of relevant images to complement the summary
 
-- **Beautiful UI**
-  - Modern, responsive interface with purple theme
-  - Intuitive navigation and user experience
+- **Screenshot Functionality**
+  - Take screenshots of summaries for easy sharing and offline reference
+  - Clean, formatted output with proper styling and included diagrams
 
 ## Tech Stack
 
@@ -48,15 +48,17 @@
   - YouTube Transcript API for video transcripts
   - PyPDF2 for PDF processing
   - python-pptx for PowerPoint files
+  - Selenium for screenshot capabilities
 - **Image Search**: DuckDuckGo Search API
 - **Frontend**: HTML, CSS, JavaScript
+- **UI Theme**: Dark Purple (#3E2A47)
 
 ## Installation
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/ai-summarizer.git
-   cd ai-summarizer
+   git clone https://github.com/yourusername/infobite.git
+   cd infobite
    ```
 
 2. **Install dependencies**
@@ -72,6 +74,12 @@
    ```
    
    > **Note**: You need to obtain a Google API key from [Google AI Studio](https://makersuite.google.com/app/apikey)
+   >
+   > **Security Best Practices**:
+   > - Never commit your `.env` file to version control
+   > - Add `.env` to your `.gitignore` file
+   > - Regularly rotate your API keys
+   > - Restrict API key usage with appropriate quotas and limitations
 
 ## Usage
 
@@ -89,16 +97,20 @@
    - **For YouTube videos**:
      - Paste a YouTube URL
      - Select a prompt option (Default, Concise, or Custom)
-     - Click "Generate Summary"
+     - Click "Get MU-Style Notes"
    
    - **For documents**:
      - Upload a PDF or PPT file
-     - Click "Generate Summary"
+     - Click "Get MU-Style Notes"
+   
+   - **For both**:
+     - After generating notes, use the screenshot button to save a clean copy
+     - Use the Q&A chat feature to ask questions about the content
 
 ## Project Structure
 
 ```
-ai-summarizer/
+infobite/
 │
 ├── app/                    # Application package
 │   ├── __init__.py         # Application factory
@@ -120,13 +132,15 @@ ai-summarizer/
 │       ├── document.py     # Document processing utilities
 │       ├── filters.py      # Template filters
 │       ├── images.py       # Image handling utilities
+│       ├── screenshot.py   # Screenshot generation utilities
 │       ├── summary.py      # Summary generation utilities
 │       └── transcript.py   # Transcript extraction utilities
 │
 ├── static/                 # Static assets
 │   ├── css/
 │   ├── js/
-│   └── images/
+│   ├── images/
+│   └── screenshots/        # Storage for generated screenshots
 │
 ├── templates/              # HTML templates
 │   ├── index.html
@@ -144,13 +158,14 @@ ai-summarizer/
 
 - **Exam Preparation**: Quickly extract key points from lengthy lecture videos
 - **Research Assistance**: Summarize research papers and presentations
-- **Study Groups**: Share concise summaries of course materials
+- **Study Groups**: Share concise summaries of course materials with screenshots
 - **Quick Reviews**: Refresh your understanding of complex topics before exams
-
+- **Day to Day Use**: Reading the Top 10 headlines on Today
+  
 ## Contributors
 
-- [Karan Kale](https://github.com/KaleKaran) - [LinkedIn](https://www.linkedin.com/in/karan-b-kale-ai-ml-dl/)
-- [Gandharav Akhedekar](mailto:gandharavakhedekar236@nhitm.ac.in)
+- [Karan Kale](https://github.com/KaleKaran) -> [LinkedIn](https://www.linkedin.com/in/karan-b-kale-ai-ml-dl/)
+- [Gandharava Khedekar](https://github.com/GandharvaChamp) -> [LinkedIn](https://www.linkedin.com/in/gandharva-khedekar/)
 
 ## License
 
@@ -161,11 +176,12 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - [YouTube Transcript API](https://github.com/jdepoix/youtube-transcript-api) for transcript extraction
 - [Google Generative AI](https://ai.google.dev/) for the powerful AI capabilities
 - [Flask](https://flask.palletsprojects.com/) for the web framework
+- [Selenium](https://www.selenium.dev/) for screenshot capabilities
 - Mumbai University Engineering Department for inspiration
 
 ---
 
 <div align="center">
   <p>If you found this project helpful, please consider giving it a star!</p>
-  <p>© 2025 AI Summarizer. All rights reserved.</p>
+  <p>© 2025 InfoBite. All rights reserved.</p>
 </div> 
